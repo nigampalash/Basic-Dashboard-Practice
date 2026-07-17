@@ -1,0 +1,63 @@
+import { useEffect, useState } from "react";
+import axios from "axios";
+
+function App() {
+
+    const [stats, setStats] = useState({});
+    const [activities, setActivities] = useState([]);
+
+    useEffect(() => {
+
+        axios.get("http://127.0.0.1:5000/dashboard")
+            .then((res) => setStats(res.data));
+
+        axios.get("http://127.0.0.1:5000/activities")
+            .then((res) => setActivities(res.data));
+
+    }, []);
+
+    return (
+
+        <div>
+
+            <h1>Dashboard</h1>
+
+            <h2>Users: {stats.users}</h2>
+            <h2>Revenue: ${stats.revenue}</h2>
+            <h2>Orders: {stats.orders}</h2>
+            <h2>Visitors: {stats.visitors}</h2>
+
+            <hr />
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Status</th>
+                        <th>Date</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    {activities.map((item, index) => (
+
+                        <tr key={index}>
+                            <td>{item.name}</td>
+                            <td>{item.status}</td>
+                            <td>{item.date}</td>
+                        </tr>
+
+                    ))}
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    );
+}
+
+export default App;
