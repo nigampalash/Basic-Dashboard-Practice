@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <h2>Dashboard</h2>
+
+        <ul>
+            <li class="active">🏠 Home</li>
+            <li>📊 Analytics</li>
+            <li>👥 Users</li>
+            <li>⚙ Settings</li>
+        </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main">
+
+        <header>
+            <h1>Welcome Back 👋</h1>
+
+            <button id="themeBtn">
+                🌙 Dark Mode
+            </button>
+        </header>
+
+        <!-- Cards -->
+        <section class="cards">
+
+            <div class="card">
+                <h3>Total Users</h3>
+                <p id="users">1,245</p>
+            </div>
+
+            <div class="card">
+                <h3>Revenue</h3>
+                <p>$12,500</p>
+            </div>
+
+            <div class="card">
+                <h3>Orders</h3>
+                <p>327</p>
+            </div>
+
+            <div class="card">
+                <h3>Visitors</h3>
+                <p>8,540</p>
+            </div>
+
+        </section>
+
+        <!-- Table -->
+        <section class="table-section">
+
+            <h2>Recent Activity</h2>
+
+            <table>
+
+                <tr>
+                    <th>Name</th>
+                    <th>Status</th>
+                    <th>Date</th>
+                </tr>
+
+                <tr>
+                    <td>John</td>
+                    <td>Completed</td>
+                    <td>20 Jul</td>
+                </tr>
+
+                <tr>
+                    <td>Emma</td>
+                    <td>Pending</td>
+                    <td>19 Jul</td>
+                </tr>
+
+                <tr>
+                    <td>Alex</td>
+                    <td>Completed</td>
+                    <td>18 Jul</td>
+                </tr>
+
+                <tr>
+                    <td>David</td>
+                    <td>Cancelled</td>
+                    <td>17 Jul</td>
+                </tr>
+
+            </table>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
